@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Reuben Rajan George - Cloud Reliability Test Architect">
-    <title>Reuben Rajan George | Cloud Reliability Test Architect</title>
+    <meta name="description" content="Reuben Rajan George - Principal Architect, System Performance & Reliability">
+    <title>Reuben Rajan George | Principal Architect, System Performance & Reliability</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
@@ -12,23 +12,20 @@
         :root {
             --bg-color: #0a0a0a;
             --text-primary: #ffffff;
-            --text-secondary: #a1a1aa; /* Zinc 400 */
-            --text-tertiary: #52525b; /* Zinc 600 */
-            --border-color: #27272a; /* Zinc 800 */
-            --accent: #ffffff;
+            --text-secondary: #a1a1aa;
+            --text-tertiary: #52525b;
+            --border-color: #27272a;
             --font-main: 'Inter', sans-serif;
-            
             --nav-width: 250px;
             --max-width: 700px;
         }
 
         :root.light-mode {
             --bg-color: #ffffff;
-            --text-primary: #18181b; /* Zinc 900 */
-            --text-secondary: #52525b; /* Zinc 600 */
-            --text-tertiary: #a1a1aa; /* Zinc 400 */
-            --border-color: #e4e4e7; /* Zinc 200 */
-            --accent: #000000;
+            --text-primary: #18181b;
+            --text-secondary: #52525b;
+            --text-tertiary: #a1a1aa;
+            --border-color: #e4e4e7;
         }
 
         body {
@@ -76,7 +73,7 @@
         a {
             color: var(--text-secondary);
             text-decoration: none;
-            transition: color 0.2s ease, transform 0.2s ease;
+            transition: color 0.2s ease;
             display: inline-flex;
             align-items: center;
             gap: 0.5rem;
@@ -200,7 +197,7 @@
         }
 
         /* Lists */
-        ul {
+        ul, ol {
             list-style-type: none;
             padding-left: 0;
             margin-top: 0;
@@ -217,8 +214,28 @@
             content: "→";
             position: absolute;
             left: 0;
+            top: 0;
             color: var(--text-tertiary);
             font-family: monospace;
+        }
+
+        .content-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 1.5rem;
+        }
+
+        .content-table td {
+            padding-bottom: 1.25rem;
+            vertical-align: top;
+        }
+
+        .content-table td.arrow {
+            color: var(--text-tertiary);
+            font-family: monospace;
+            padding-right: 0.75rem;
+            white-space: nowrap;
+            width: 1rem;
         }
 
         /* Experience Items */
@@ -241,27 +258,6 @@
             gap: 1rem;
         }
 
-        /* Numbered Lists (for Awards/Thought Leadership) */
-        .numbered-list {
-            counter-reset: custom-counter;
-            padding-left: 0;
-        }
-
-        .numbered-list li {
-            position: relative;
-            padding-left: 2rem;
-            margin-bottom: 1.25rem;
-        }
-
-        .numbered-list li::before {
-            counter-increment: custom-counter;
-            content: "0" counter(custom-counter) ".";
-            position: absolute;
-            left: 0;
-            color: var(--text-tertiary);
-            font-size: 0.75rem;
-            top: 0.25rem;
-        }
 
         /* Responsive */
         @media (max-width: 800px) {
@@ -340,12 +336,21 @@
             stroke-linejoin: round;
         }
 
-        .sidebar[data-mobile] .theme-toggle {
-            margin-top: 0;
-        }
-
         :root.light-mode .moon-icon { display: none; }
         :root:not(.light-mode) .sun-icon { display: none; }
+
+
+
+        .section-subtitle {
+            font-size: 1.25rem;
+            color: var(--text-primary);
+            max-width: 500px;
+            margin-bottom: 1.5rem;
+        }
+
+        .section-h2-spaced {
+            margin-top: 2rem;
+        }
     </style>
 </head>
 <body>
@@ -356,7 +361,7 @@
             <div class="sidebar-header">
                 <img src="profile.jpg" alt="Reuben Rajan George" class="profile-photo">
                 <p class="name">Reuben Rajan George</p>
-                <p class="title">Cloud Reliability Test Architect</p>
+                <p class="title">Principal Architect, System Performance & Reliability</p>
             </div>
             
             <div class="nav-links">
@@ -365,6 +370,7 @@
                 <a href="#experience" class="nav-link">Experience</a>
                 <a href="#skills" class="nav-link">Skills</a>
                 <a href="#thought-leadership" class="nav-link">Thought Leadership</a>
+                <a href="#patents" class="nav-link">Patents</a>
                 <a href="#awards" class="nav-link">Awards</a>
                 <a href="#education" class="nav-link">Education</a>
             </div>
@@ -391,41 +397,60 @@
         <main class="main-content">
             <div class="content-wrapper">
                 
-                <!-- Intro Section -->
+
                 <section id="intro" class="reveal">
                     <h1>Reuben Rajan George</h1>
-                    <p style="font-size: 1.25rem; color: var(--text-primary); max-width: 500px;">Cloud Reliability Test Architect</p>
-                    
+                    <p class="section-subtitle">Principal Architect, System Performance & Reliability</p>
+
                     <div class="intro-meta">
                         <span>Bengaluru, Karnataka, India</span>
                         <a href="mailto:reubenrajan@gmail.com">reubenrajan@gmail.com</a>
                         <span>+91-9036302719</span>
-                        <a href="Resume - Reuben Rajan George.pdf" target="_blank">Download Resumé ↗</a>
+                        <span style="flex-basis: 100%; height: 0;"></span>
+                        <a href="https://www.linkedin.com/in/reubenrajan/" target="_blank">LinkedIn ↗</a>
+                        <a href="https://research.reubenrajan.dev/" target="_blank">Research ↗</a>
+                        <a href="https://projects.reubenrajan.dev/" target="_blank">Projects ↗</a>
+                        <a href="Reuben Rajan George - Resume.pdf" target="_blank">Download Resumé ↗</a>
                     </div>
                 </section>
 
-                <!-- About Section -->
+
                 <section id="about" class="reveal">
                     <h2>About me</h2>
-                    <p>Cloud Reliability Engineer with more than 12 years of strong system performance engineering, training & consulting experience looking forward to solving complex system reliability problems with a reputed organization.</p>
+                    <p>Principal Architect with 15 years of hands-on experience making complex systems faster, more resilient, and more observable — across distributed cloud architectures, blockchain platforms, IoT infrastructure, SAP, digital and mobile ecosystems. The experience and lessons learnt is now directly applied to the most challenging reliability problems in enterprise AI: evaluating agentic systems, optimising inference cost and latency, and building the frameworks organisations need to make agentic AI efficient, trustworthy, cost-efficient, and production-ready.</p>
                 </section>
 
-                <!-- Experience Section -->
+
                 <section id="experience" class="reveal">
                     <h2>Experience</h2>
 
                     <div class="timeline-item">
                         <h3>Accenture Solutions Pvt. Ltd</h3>
                         <div class="timeline-meta">
-                            <span>Cloud Reliability Test Architect</span>
-                            <span>December 2018 - PRESENT · Bengaluru</span>
+                            <span>AI & Agentic Quality</span>
+                            <span>January 2026 – Present · Bengaluru</span>
                         </div>
                         <ul class="bullet-list">
-                            <li>Co-developed reliability engineering practice involving techniques, practices and tools that are being currently developed.</li>
-                            <li>Certified cloud solution architect with good skills in optimizing Windows & UNIX operating systems, and is experienced in Python, Go, Java and Javascript.</li>
-                            <li>Set up test environments to conduct performance and chaos tests with strong expertise in most performance and chaos testing tools in the market notably JMeter, Gatling, CloudTest, Loadrunner; and Gremlin and ChaosToolkit.</li>
-                            <li>Set up observability platforms and designed custom dashboards using query languages. Skilled in capturing performance metrics and tracing transaction journeys and identifying performance bottlenecks across the stack. Skilled in tools such as Dynatrace, AppDynamics, NewRelic, Prometheus, Grafana etc.</li>
-                            <li>Thought leader in the area of resilience engineering and observability. Involved in developing SRE course curriculum, Digital experience workshops, speaking engagements (conferences/brown bag sessions) and white papers.</li>
+                            <li>Developing Accenture's agentic evaluation and well-architected frameworks to benchmark, assess, and optimize performance, reliability, and cost of agentic AI systems at enterprise scale.</li>
+                            <li>Built Claude-powered agentic test automation agents for end-to-end performance testing of packaged enterprise applications (SAP, Oracle ERP) — reducing manual test effort and enabling continuous reliability validation.</li>
+                            <li>Part of Accenture's AI Quality Advisory Team, shaping guidance on AI system quality, safety, evaluation standards, and responsible agentic deployment practices.</li>
+                        </ul>
+                    </div>
+
+                    <div class="timeline-item">
+                        <h3>Accenture Solutions Pvt. Ltd</h3>
+                        <div class="timeline-meta">
+                            <span>Principal Architect, System Reliability Engineering</span>
+                            <span>December 2018 – December 2025 · Bengaluru</span>
+                        </div>
+                        <ul class="bullet-list">
+                            <li>Built Accenture's Reliability Testing practice from the ground up — defined standards, tool frameworks, and delivery frameworks adopted across multiple enterprise engagements.</li>
+                            <li>Architected and deployed "self-managed" Chaos Engineering platforms for enterprise clients using Gremlin, ChaosToolkit, and LitmusChaos on AWS and Kubernetes environments.</li>
+                            <li>Designed full-stack observability solutions using Thanos, Prometheus, Grafana, and OTel; built custom dashboards and alert frameworks, with notification webhooks.</li>
+                            <li>Led performance engineering engagements using JMeter, Gatling, LoadRunner, and NeoLoad — covering workload modelling, bottleneck analysis, and capacity planning across distributed cloud architectures.</li>
+                            <li>Built a custom performance testing framework to benchmark and tune Hyperledger Fabric-based CBDC platform for a national central bank — tuned thread pooling, JVM configuration and optimised transaction throughput for high frequency wallet token transactions.</li>
+                            <li>Traced end-to-end transaction journeys across application, infrastructure, and network layers to pinpoint bottlenecks using AppDynamics, NewRelic, and Dynatrace.</li>
+                            <li>Helped established SRE as an internal discipline at Accenture — developed course curriculum, ran workshops, and contributed to thought leadership through conference talks and white papers.</li>
                         </ul>
                     </div>
 
@@ -433,15 +458,17 @@
                         <h3>Accenture Solutions Pvt. Ltd</h3>
                         <div class="timeline-meta">
                             <span>Digital Performance Test Architect</span>
-                            <span>August 2015 - November 2018 · Bengaluru</span>
+                            <span>August 2015 – November 2018 · Bengaluru</span>
                         </div>
                         <ul class="bullet-list">
-                            <li>Developed Digital Performance Engineering capability which included mobile (Android, iOS) and web browser performance testing, monitoring and optimization.</li>
-                            <li>Supported as subject matter expert on mobile performance engineering proposals for more than 150 clients developing testing, engineering and monitoring approaches.</li>
-                            <li>Delivered 8 digital performance engineering customer projects which included system performance engineering and mobile app performance optimization.</li>
-                            <li>Established partner relationships to enable key performance test offerings.</li>
-                            <li>Internally published extensive knowledge documentation on mobile app performance and tool analysis.</li>
-                            <li>Setup Performance Test & Automation Labs and trained teams in 7 Accenture Delivery locations within India (Bangalore, Pune) and globally (Mexico, Brazil, Italy, Philippines & China).</li>
+                            <li>Founded and led Accenture's Digital Performance Engineering capability covering mobile (Android, iOS) and browser performance, defining testing methodologies, toolchains, and optimization playbooks from scratch.</li>
+                            <li>Built frameworks to profile and optimized mobile app performance using Android Profiler, Xcode Instruments, and Charles Proxy; analyzed rendering, memory, CPU, and network behaviour to identify and resolve performance regressions.</li>
+                            <li>Developed web benchmark frameworks using WebPageTest, Lighthouse, and Chrome DevTools — measuring and improving Core Web Vitals, Time to Interactive, and render-critical resource loading; also deployed it at scale for a Google Research Study benchmarking 600+ retail, travel and banking websites for the APAC region.</li>
+                            <li>Served as SME on mobile and digital performance proposals for 150+ enterprise clients, shaping testing strategy, tool selection, and SLA frameworks across diverse technology stacks.</li>
+                            <li>Delivered 8 digital performance engineering engagements spanning mobile app optimization and system-level performance validation; accountable end-to-end from scoping through root cause analysis.</li>
+                            <li>Designed and executed performance tests for IoT messaging frameworks using MQTT and AMQP protocols; simulated high-concurrency device telemetry workloads using JMeter MQTT plugin, validated message throughput and broker saturation thresholds under peak load.</li>
+                            <li>Established technology partnerships to expand Accenture's performance testing offerings and co-develop client-facing GTM solutions.</li>
+                            <li>Built and scaled Performance Test & Automation Labs across 7 Accenture delivery locations in India and globally (Mexico, Brazil, Italy, Philippines, China), standardizing tooling, environments, and training curricula.</li>
                         </ul>
                     </div>
 
@@ -449,12 +476,14 @@
                         <h3>Accenture Solutions Pvt. Ltd</h3>
                         <div class="timeline-meta">
                             <span>Performance Testing Lead, Global Hospitality Company</span>
-                            <span>July 2014 - August 2015 · Bengaluru</span>
+                            <span>July 2014 – August 2015 · Bengaluru</span>
                         </div>
                         <ul class="bullet-list">
-                            <li>Led a multi-location SAP Performance Test team to performance validate the infrastructure refresh of more than 14 SAP systems.</li>
-                            <li>Employed HP Loadrunner to conduct performance tests against SAP applications that are monitored using SAP Transaction Codes, Sitescope & Wily Introscope, and conducted thorough pre-migration baseline and post migration performance benchmark exercises.</li>
-                            <li>Received Accenture Excellence Award & exception client feedback for the successful project delivery.</li>
+                            <li>Led a distributed, multi-location SAP performance test team to validate infrastructure refresh across 14+ SAP systems including ECC, BW, and CRM.</li>
+                            <li>Scripted and executed SAP performance tests using HP LoadRunner with SAP-Web and SAP-GUI protocols; monitored system behaviour through SAP transaction codes (ST03, STAD) to analyse work process utilisation, lock contention, and dialog step response times.</li>
+                            <li>Monitored end-to-end transaction performance using Wily Introscope (CA APM).</li>
+                            <li>Established pre-migration performance baselines and ran post-migration benchmarks to validate SLA compliance and quantify infrastructure gain — providing sign-off evidence for production cutover.</li>
+                            <li>Received Accenture Excellence Award for on-time delivery and client-cited performance improvements following infrastructure refresh.</li>
                         </ul>
                     </div>
 
@@ -462,67 +491,101 @@
                         <h3>Accenture Solutions Pvt. Ltd</h3>
                         <div class="timeline-meta">
                             <span>Performance Test Engineer, Global Pharmaceutical Company</span>
-                            <span>June 2011 - July 2014 · Bengaluru</span>
+                            <span>June 2011 – July 2014 · Bengaluru</span>
                         </div>
                         <ul class="bullet-list">
-                            <li>Developed performance test artifacts for 6 projects under the Digital Marketing team.</li>
-                            <li>Tested and analyzed performance of SOA architectures and helped baseline performance.</li>
-                            <li>Assisted in test automation activities for multiple projects.</li>
+                            <li>Delivered performance testing across 6 digital marketing projects for a global life sciences company — covering drug brand marketing websites, prescription product landing pages, HCP portals, patient support platforms, and medical information web applications.</li>
+                            <li>Performance tested SOA-based integration layers using HP LoadRunner with Web Services (SOAP/REST) protocols; validated message throughput, service response SLAs, and transaction throughput.</li>
+                            <li>Supported test automation activities using HP Quality Center (ALM) for defect tracking, test planning, and compliance-aligned test evidence management across multiple concurrent project tracks.</li>
                         </ul>
                     </div>
                 </section>
 
-                <!-- Skills Section -->
+
                 <section id="skills" class="reveal">
                     <h2>Skills</h2>
                     <ul class="bullet-list">
-                        <li><strong>Programming:</strong> Java, Javascript, Python</li>
-                        <li><strong>Deployment:</strong> GIT, Maven, Gradle, Jenkins</li>
-                        <li><strong>Chaos Testing:</strong> Gremlin, ChaosToolkit, LitmusChaos</li>
-                        <li><strong>Performance Testing:</strong> LoadRunner, Neoload, JMeter, Gatling</li>
-                        <li><strong>Observability:</strong> Dynatrace, Splunk, Grafana, Prometheus, NewRelic, DataDog, ELK Stack</li>
-                        <li><strong>Network Profiling:</strong> Wireshark</li>
+                        <li><strong>Develop:</strong> JavaScript, Python, AI Assistants (Claude, Github Copilot, Antigravity), LangGraph</li>
+                        <li><strong>Build & Deploy:</strong> Gitlab, JIRA, Confluence</li>
+                        <li><strong>Test — Performance Engineering:</strong> K6, JMeter, Artillery, LoadRunner, NeoLoad</li>
+                        <li><strong>Test — Chaos & Resilience:</strong> Harness, Gremlin, ChaosToolkit, LitmusChaos</li>
+                        <li><strong>Test — AI Evaluation:</strong> DeepEval, MLflow</li>
+                        <li><strong>Observe — Systems:</strong> Dynatrace, Splunk, Grafana, Prometheus, OpenTelemetry, NewRelic, DataDog</li>
+                        <li><strong>Observe — AI Systems:</strong> MLflow, DeepEval, OpenTelemetry</li>
+                        <li><strong>Infrastructure:</strong> AWS, Kubernetes, Fargate, Vercel, CloudFlare Workers</li>
+                    </ul>
+
+                    <h2 class="section-h2-spaced">Certifications</h2>
+                    <ul class="bullet-list">
+                        <li>Claude Certified Architect — Associate (Pursuing)</li>
+                        <li>AWS Solution Architect Associate</li>
+                        <li>Gremlin Certified Chaos Engineering Professional</li>
+                        <li>Harness Certified Expert — Resilience Testing</li>
+                        <li>Reinvention with Agentic AI (Accenture Forward Deployed Engineer)</li>
+                        <li>NeoLoad Certified Expert</li>
                     </ul>
                 </section>
 
-                <!-- Thought Leadership -->
+
                 <section id="thought-leadership" class="reveal">
                     <h2>Thought Leadership</h2>
-                    <ul class="numbered-list">
-                        <li>Whitepaper "Improved Business Outcomes from Cloud Applications – using Integrated Process and Runtime Product DataMining" got accepted in 44th ACM/ IEEE International Conference on Software Engineering co-hosted eventMining Software Repositories – Industry Track for May 2022.</li>
-                        <li>Awarded the "Best of the Best Award" Software Testing Conference (STC 2021) for the industry paper "Continuous System Resilience Management".</li>
-                        <li>Lightning Talk - “Role of Quality Engineers in SRE” at Conf42 Chaos Engineering Conference - March 2021.</li>
-                        <li>Workshop - “UX Master Class Series on SEO & Performance” for Singapore Government - February 2021.</li>
-                        <li>Presented Industry Whitepaper at IEEE ICGSE Conference 2020, Seoul, South Korea on topic - “Observability Driven Development and Continuous Delivery”.</li>
-                        <li>Delivered a talk at “Performance Advisory Council”, Bangalore Chapter, organized by Neotys at Taj MG Road, on the topic - “Art of Observability” - September 2019.</li>
+                    <ul class="bullet-list">
+                        <li><strong>May 2025</strong> — Co-presented at the <strong>MIT STAMP Workshop</strong>, Boston on <em>"Application of STAMP/STPA in Distributed Digital Infrastructure – eCommerce System Example"</em> — applied MIT's System-Theoretic Accident Model and Process (STAMP) and STPA hazard analysis methodology to identify systemic safety risks and emergent failure modes in large-scale distributed eCommerce architectures.</li>
+                        <li><strong>January 2025</strong> — Speaker at <a href="https://www.harness.io/event/chaoscarnival-2025" target="_blank"><strong>Chaos Carnival 2025</strong> (Harness) ↗</a> on <em>"Resilience and Chaos Engineering Automation"</em>.</li>
+                        <li><strong>May 2022</strong> — Industry whitepaper <a href="https://conf.researchr.org/details/msr-2022/msr-2022-industry-track/8/Improved-Business-Outcomes-from-Cloud-Applications-using-Integrated-Process-and-Ru" target="_blank"><em>"Improved Business Outcomes from Cloud Applications – using Integrated Process and Runtime Product Data Mining"</em> ↗</a> accepted at the <strong>44th ACM/IEEE International Conference on Software Engineering (ICSE)</strong>, Mining Software Repositories (MSR) Industry Track.</li>
+                        <li><strong>2021</strong> — Awarded <strong>"Best of the Best Award"</strong> at <strong>Software Testing Conference (STC 2021)</strong>, themed <em>"Continuous Testing @ Scale"</em>, for the industry paper <em>"Continuous System Resilience Management"</em> — recognised for advancing the discipline of ongoing, automated resilience validation integrated into the software delivery lifecycle.</li>
+                        <li><strong>March 2021</strong> — Lightning Talk: <a href="https://www.conf42.com/Chaos_Engineering_2021_Reuben_Rajan_George_sre_quality_engineers" target="_blank"><em>"Role of Quality Engineers in SRE"</em> ↗</a> at <strong>Conf42 Chaos Engineering Conference</strong> — addressed quality engineers transitioning into SRE, covering how to apply observability within functional and performance testing pipelines and automate chaos and resilience test scenario creation.</li>
+                        <li><strong>February 2021</strong> — Delivered workshop <em>"UX Master Class Series on SEO & Performance"</em> for the <strong>Singapore Government</strong> — covered web performance engineering practices including Core Web Vitals optimisation, SEO-performance intersection, and measurement frameworks for government digital services.</li>
+                        <li><strong>June 2020</strong> — Presented industry whitepaper at the <a href="https://conf.researchr.org/details/icgse-2020/icgse-2020-icgse---industry-talks/1/Observability-Driven-Development-and-Continuous-Delivery" target="_blank"><strong>15th IEEE/ACM International Conference on Global Software Engineering (ICGSE 2020)</strong> ↗</a>, Seoul, South Korea: <em>"Observability Driven Development and Continuous Delivery"</em> — proposed embedding observability instrumentation as a first-class practice within the CI/CD pipeline.</li>
+                        <li><strong>September 2019</strong> — Delivered talk <em>"Art of Observability"</em> at the <strong>Performance Advisory Council</strong>, Bangalore Chapter, organised by Neotys at Taj MG Road — covered observability strategies for distributed systems including structured logging, distributed tracing, and metrics-driven performance engineering.</li>
+                        <li><strong>2018</strong> — Built the performance benchmarking framework and designed the evaluation methodology for <a href="https://www.thinkwithgoogle.com/intl/en-apac/marketing-strategies/app-and-mobile/masters-mobile-apac-report/" target="_blank"><strong>Google's "Masters of Mobile" APAC Research</strong> (Think with Google) ↗</a> — assessed 700+ mobile sites across APAC, benchmarking retail, travel, and financial services brands on mobile UX, page speed, and conversion-impacting performance metrics.</li>
                     </ul>
                 </section>
 
-                <!-- Awards Section -->
+
+                <section id="patents" class="reveal">
+                    <h2>Patents</h2>
+                    <ul class="bullet-list">
+                        <li><a href="https://patents.google.com/patent/US10459835B1" target="_blank"><strong>US10459835B1 — System and Method for Controlling Quality of Performance of Digital Applications ↗</strong></a> <em>(Granted October 2019)</em><br>An automated performance engineering system that uses AI-trained bots to test web and mobile apps under simulated real-world conditions (network, CPU, memory, battery). Detects performance issues, classifies them by urgency (immediate, short-term, long-term), auto-applies front-end remediations (image compression, unused code removal, JS optimisation), and validates improvements via before/after metric comparison before production deployment.</li>
+                        <li><a href="https://patents.google.com/patent/US20230315954A1" target="_blank"><strong>US20230315954A1 — Dynamic Failure Mode Effect Analysis and Recovery Process Recommendation for Cloud Computing Applications ↗</strong></a> <em>(Granted October 2023)</em><br>A dynamic risk analysis engine for cloud-native and IoT/edge systems that uses ML to identify failure patterns from historical operational metadata across a device hierarchy. Assigns Risk Priority Numbers (RPN) based on severity, probability, and detectability, then recommends context-aware recovery processes optimised for minimal latency and compute overhead, maintaining a knowledge base of failure patterns for continuous improvement.</li>
+                        <li><a href="https://patents.google.com/patent/US20240168857A1" target="_blank"><strong>US20240168857A1 — Utilizing Digital Twins for Data-Driven Risk Identification and Root Cause Analysis of a Distributed and Heterogeneous System ↗</strong></a> <em>(Granted May 19, 2026)</em><br>A digital twin architecture for hybrid cloud environments where individual component twins feed operational metrics and functional logs into a central coordinating twin. Uses PCA (reconstruction error analysis) and Self-Organizing Maps (SOM) for anomaly detection, then generates a KPI cause vector to trace root causes iteratively across causality levels — enabling preventive action before failures propagate in edge-cloud and heterogeneous distributed systems.</li>
+                        <li><a href="https://patents.google.com/patent/US20240403135A1" target="_blank"><strong>US20240403135A1 — Cloud Fitness Engineering ↗</strong></a> <em>(Published December 2024, Pending)</em><br>An ML-driven system that identifies optimal cloud architectures for specific applications by decomposing business performance goals into measurable technical parameters (throughput, latency, fault tolerance, error rates), then simulating candidate architectures under stress conditions (network outages, load spikes, security breaches). A fitness design controller selects the architecture that best satisfies competing constraints and trade-offs — addressing the core problem of one-size-fits-all cloud migration failures.</li>
+                    </ul>
+                </section>
+
+
                 <section id="awards" class="reveal">
                     <h2>Awards</h2>
-                    <ul class="numbered-list">
-                        <li>Received 5 Accenture Excellence awards for exceptional contribution in Innovation & Project Delivery.</li>
-                        <li>Received 1 APAC region award for delivery project excellence in driving change in business innovation.</li>
-                        <li>Received 1 Life Sciences Delivery Excellence Award for exceptional project contribution.</li>
-                        <li>Awarded 1 Patent (US10459835B1) for the paper - “System and method for controlling quality of performance of digital applications”. 2 additional patents filed.</li>
+                    <ul class="bullet-list">
+                        <li>Received <strong>Accenture Celebrates Excellence Awards</strong> for exceptional contribution in Innovation & Project Delivery — 2025, 2022, 2021, 2020, 2019, 2018, 2016.</li>
+                        <li>Received APAC region award for delivery project excellence in driving change in business innovation — 2015 (Google Research).</li>
+                        <li>Received Life Sciences Delivery Excellence Award for exceptional project contribution — 2014.</li>
+                        <li>Awarded <strong>"Best of the Best Award"</strong> at Software Testing Conference (STC 2021) for the paper <em>"Continuous System Resilience Management"</em>.</li>
                     </ul>
                 </section>
 
-                <!-- Education Section -->
+
                 <section id="education" class="reveal">
                     <h2>Education</h2>
-                    
+
+                    <div class="timeline-item">
+                        <h3>Life Christian University</h3>
+                        <div class="timeline-meta">
+                            <span>Bachelor of Theology</span>
+                            <span>August 2021 – August 2025 · Florida, USA</span>
+                        </div>
+                    </div>
+
                     <div class="timeline-item">
                         <h3>Mahatma Gandhi University</h3>
                         <div class="timeline-meta">
                             <span>Bachelor of Technology, Information Technology</span>
-                            <span>August 2007 - June 2011 · Kerala, India</span>
+                            <span>August 2007 – June 2011 · Kerala, India</span>
                         </div>
                         <ul class="bullet-list">
                             <li>Passed with 71% GPA.</li>
-                            <li>Project - Developed a Human-Computer Interface (HCI) where the computer mouse was controlled by an eye tracking algorithm developed on Matlab.</li>
-                            <li>Research Paper - Applying data mining techniques to determine crime patterns facilitating law enforcement to identify crime sprees, crime types and organized criminal gangs.</li>
+                            <li><strong>Project:</strong> Developed a Human-Computer Interface (HCI) where the computer mouse was controlled by an eye tracking algorithm developed on Matlab.</li>
+                            <li><strong>Research Paper:</strong> Applying data mining techniques to determine crime patterns facilitating law enforcement to identify crime sprees, crime types and organized criminal gangs.</li>
                             <li>Point Guard for college Basketball team, competed in inter-college tournaments.</li>
                         </ul>
                     </div>
@@ -531,7 +594,7 @@
                         <h3>Indian Community School Kuwait</h3>
                         <div class="timeline-meta">
                             <span>CBSE 10th & 12th Board</span>
-                            <span>March 2015 - March 2007 · Kuwait</span>
+                            <span>March 2005 – March 2007 · Kuwait</span>
                         </div>
                         <ul class="bullet-list">
                             <li>Completed both 10th & 12th Boards with distinction.</li>
